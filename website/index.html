@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Azure Linux Web Server</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .card p {
+            margin: 8px 0;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Azure Linux Cloud Server</h1>
+    <p>Entry-Level Cloud Engineering Project</p>
+</header>
+
+<div class="container">
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>Server</h2>
+
+            <p>
+                <span class="label">Operating System:</span>
+                Ubuntu Linux
+            </p>
+
+            <p>
+                <span class="label">Web Server:</span>
+                Nginx
+            </p>
+
+            <p>
+                <span class="label">Server:</span>
+                vm-web-01
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Azure</h2>
+
+            <p>
+                <span class="label">Region:</span>
+                South Africa North
+            </p>
+
+            <p>
+                <span class="label">Resource Group:</span>
+                rg-cloud-project
+            </p>
+
+            <p>
+                <span class="label">Virtual Network:</span>
+                10.10.0.0/16
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Networking</h2>
+
+            <p>
+                <span class="label">Subnet:</span>
+                10.10.1.0/24
+            </p>
+
+            <p>
+                <span class="label">HTTP:</span>
+                TCP 80
+            </p>
+
+            <p>
+                <span class="label">SSH:</span>
+                TCP 22
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Security</h2>
+
+            <p>
+                <span class="label">NSG:</span>
+                nsg-web
+            </p>
+
+            <p>
+                <span class="label">SSH Access:</span>
+                Restricted to administrator IP
+            </p>
+
+            <p>
+                <span class="label">HTTP Access:</span>
+                Public
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>Cloud Engineering Portfolio Project</p>
+</footer>
+
+</body>
+</html>
