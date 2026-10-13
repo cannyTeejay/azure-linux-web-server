@@ -42,6 +42,10 @@ echo "[6/6] Checking firewall..."
 sudo ufw status
 
 echo ""
+echo "Listening ports:"
+sudo ss -tlnp | grep -E ':22|:80' || true
+
+echo ""
 echo "======================================"
 echo " Server setup completed successfully"
 echo "======================================"
