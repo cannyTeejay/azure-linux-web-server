@@ -79,4 +79,4 @@ terraform plan
 terraform state list
 ```
 
-Add a screenshot of the deployed site and a diagram image if available. Keep account IDs, private IP details that should not be public, and credentials out of screenshots.
+![Dashboard](image.png)
