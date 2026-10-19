@@ -64,17 +64,39 @@ The `scripts/setup-server.sh` script automates key server setup tasks, including
 
 ## Terraform and Infrastructure as Code
 
-Terraform is being introduced to manage the existing Azure infrastructure without recreating resources that were previously deployed manually.
+Terraform is used to manage existing Azure infrastructure that was initially deployed through the Azure Portal. Rather than recreating the resources, I imported them into Terraform state and reconciled the configuration with the deployed infrastructure.
 
-The current Terraform configuration manages:
+### Resources managed by Terraform
 
-- Resource group
-- Virtual network
-- Subnet
+- Azure Resource Group
+- Virtual Network and Subnet
+- Network Security Group and Subnet Association
+- Public IP Address
+- Network Interface
+- Linux Virtual Machine
 
-The existing resources were imported into Terraform state, and the configuration was reconciled until `terraform plan` reported that no changes were needed.
+### Validation workflow
 
-The next phase is to bring the existing NSG and security rules, public IP, network interface, and virtual machine under Terraform management.
+```powershell
+cd terraform
+terraform init
+terraform fmt
+terraform validate
+terraform plan
+terraform state list
+```
+
+The configuration was validated, and `terraform plan` reported that no changes were needed. This confirms that the managed resources match the current Terraform configuration.
+
+I review Terraform plans before making changes to avoid accidental modifications or replacement of existing infrastructure.
+
+## Project Status
+
+**Deployed — Terraform configuration reconciled.**
+
+The Ubuntu Linux virtual machine is running Nginx, and the website remains accessible. Eight existing Azure resources are tracked in Terraform state, with the latest plan reporting no changes.
+
+Future improvements may include more complete security-rule management, automated deployment, HTTPS, monitoring, and cost optimisation.
 
 ## Troubleshooting and Lessons Learned
 
